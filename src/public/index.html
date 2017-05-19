@@ -2,19 +2,20 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<link rel = "stylesheet" type = "text/css" href = "style.css">
+		<link rel = "stylesheet" type = "text/css" href = "css/style.css">
         <script src= "https://code.jquery.com/jquery-3.2.1.min.js "> </script>
-        <script src="script.js"></script>
+        <script src="js/script.js"></script>
 		<title>Portfolio XD</title>
 	</head>
 	<body>
 		 <header>
-			<img src = "http://placehold.it/50x50">
+			<img src = "images/logogracien.png">
 			<ul>
 			<li>Accueil</li>
-			<li><a href = "cv.html">curriculum</a> </li>
-			<li><a href = "it.html">Hobbies  </a></li>
-			<li><a href = "">Contact  </a></li>
+			<li>presentation</li>
+			<li><a href = "cv.html">curriculum</a></li>
+			<li><a href = "contact.html">Contact  </a></li>
+
 			</ul>
 		 </header>
 
@@ -24,16 +25,17 @@
 
                      <!--debut main-->
 	<main>
-		
-			<div class = "present">
-				<h2> je suis Gracien Maloumbi</h2>
-				<p> et<br/>
-				je vous souhaite bienvenue!</p>
+	
+			<div id="present" class = "present">
+				<h2><a href="#"> Gracien Maloumbi</a></h2>
+				<br>
+				<br>
+			    <p> vous souhaite la bienvenue!</p>
 				<br/>
                 <br/>
                 <br/>
  				<br/>
-                 <div class = "lien"><a href = ".main_div"><img src = "logo43.svg"></a>
+                 <div class = "lien"><a href = ".main_div"><img src = "images/logo43.svg"></a>
                  
                  </div>
 			</div>
@@ -149,8 +151,14 @@
 
 	</main>
 	<footer>
-       <p>Copyrigthing edition Gracien Maloumbi...Tous droits reservés@</p>
+       <p>Copyrighting edition Gracien Maloumbi...Tous droits reservés@</p>
 	</footer>
+	<script>
+		document.getElementById('present').style.height = window.innerHeight + 'px';
+		window.onresize = function(){
+			document.getElementById('present').style.height = window.innerHeight + 'px';
+		};
+	</script>
 </body>
  
 </html>
