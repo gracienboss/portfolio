@@ -1,3 +1,21 @@
+<?php
+
+    $menuItems = [
+          
+		  [
+			  "content" => "Accueil",
+			  "link"  => "index.php",
+		  ],
+		  [
+			  "content" => "Curriculum",
+			  "link" => "cv.php",
+		  ],
+	];
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -11,8 +29,14 @@
 			<header>
 					<img src = "iamges/logogracien.png">
 					<ul>
-						<li><a href = "index.html">Accueil</a></li>
-						<li><a href = "cv.html">curriculum</a></li>
+						<?php 
+						    foreach ($menuItems as $value)
+							{
+								echo '<li><a href ="' .$value["link"] .'">' . $value["content"] . '</a></li>';
+
+							};
+						?>
+						
 						<li><a href = "#">Contact</a></li>
 					</ul>
 			

@@ -1,3 +1,31 @@
+<?php
+	$title = "Mon portfolio XD";
+    $titre = [
+		"Les cours suivis en Developpement Web et Mobile",
+		"Poursuite en Fullstack",
+	];
+
+    $sous_titre = [ 
+		"Employabilité après cursus:",
+		"Programme de la formation :",			  				  
+	];
+
+	$menuItems = [
+         [
+			 "content" => "curriculum",			
+			 "link" => "cv.php",
+		 ],
+		 [
+			 "content" => "contact",
+			 "link" => "contact.php",
+		 ],
+		 	 
+	     
+	
+	];
+      
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,18 +33,23 @@
 		<link rel = "stylesheet" type = "text/css" href = "css/style.css">
         <script src= "https://code.jquery.com/jquery-3.2.1.min.js "> </script>
         <script src="js/script.js"></script>
-		<title>Portfolio XD</title>
+		<title><?php echo $title; ?></title>
 	</head>
 	<body>
 		 <header>
 			<img src = "images/logogracien.png">
 			<ul>
-			<li>Accueil</li>
-			<li>presentation</li>
-			<li><a href = "cv.html">curriculum</a></li>
-			<li><a href = "contact.html">Contact  </a></li>
-
+				<li>Accueil</li>
+			    <?php 
+					foreach ($menuItems as $value)
+					{
+						echo '<li><a href = "'.$value["link"].'">'.$value["content"] . '</a></li>';
+					}
+				?>
+			
+			
 			</ul>
+
 		 </header>
 
 
@@ -25,7 +58,7 @@
 
                      <!--debut main-->
 	<main>
-	
+				
 			<div id="present" class = "present">
 				<h2><a href="#"> Gracien Maloumbi</a></h2>
 				<br>
@@ -49,7 +82,7 @@
 
 
 
-		      <h2 class = "titre" >Les cours suivis en Developpement Web et Mobile</h2> 
+		      <h2 class = "titre" ><?php echo $titre[0]?></h2> 
        		 
 
   	    <div class = "main_div">
@@ -60,7 +93,7 @@
 				<div class = "text_div1">
                   <div class = "ecrito1">
                    
-   				    <h3>  Programme de la formation : </h3>
+   				    <h3><?php echo $sous_titre[1]?></h3>
                    <br/>
 				  <ul>
 					<li>Histoire et organisation d’Internet</li>
@@ -79,7 +112,7 @@
                  </div>
                  <div class = "ecrito2"> 
                     
-					<h3> Employabilité après cursus:</h3>
+					<h3> <?php echo $sous_titre[0]?></h3>
                    <br/>
 				   <ul>
 					<li>Intégrateur web</li>
@@ -94,7 +127,7 @@
           
 		  
 		        
-		    	  <h2 class="titre">Poursuite en Fullstack </h2> 
+		    	  <h2 class="titre"> <?php echo $titre[1]?></h2> 
       
 		  
         	<div id = "div2">
@@ -102,7 +135,7 @@
 			  
                      <br/> 
                 <div class = "text1">
-				  <h3> Programme:</h3>
+				  <h3> <?php echo $sous_titre[1]?></h3>
                      <br/>
 			      <ul>
 			        <li>Fondamentaux réseaux (cours CISCO)</li>
@@ -128,7 +161,7 @@
                        
                  <div class = "text2">
 			          
-					 <h3>Employabilité dans les postes suivants :</h3>
+					 <h3><?php echo $sous_titre[0]?></h3>
                      <br/>
 				   <ul>  
 				     <li>Développeur Full Stack</li>
